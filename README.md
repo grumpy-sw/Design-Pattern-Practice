@@ -27,3 +27,40 @@
 예를 들어 Subject가 새로 추가된다면? Subject의 구독자로 Observer를 추가할 뿐, Observer에는 변경사항이 없다.
 
 또한 느슨한 연결에 따라 결합도가 낮아지는 효과가 있으며 객체지향 설계 원칙 중 단일 책임 원칙과 개방 폐쇄 원칙을 준수하게 된다.
+
+
+## Publisher-Subscriber Pattern(발행 구독 패턴)
+
+발행 구독 패턴은 옵저버 패턴과 동일하게 이벤트를 발생시키는 Subject(=Publisher)와 그 이벤트를 받기위해 Subject를 관찰하는 Observer(Subscriber)가 존재한다. 둘 사이의 중간에 이벤트를 처리하는 또 하나의 계층(미들웨어)이 존재한다.
+
+발행 구독 패턴은 다음과 같은 특징이 존재한다. 
+- 발행자가 보내는 메시지(이벤트)에는 수신자가 정해져 있지 않다.
+- 특정 대상 없이 전달된 메시지는 구독중인 수신자에게 전달된다.
+- 수신자는 발행자에 대한 정보 없이 메시지(이벤트)를 수신한다.
+
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkOPnx%2FbtrrcumMg0k%2FgOlZSIj6wY0XG7JCxMhRY0%2Fimg.png)
+
+옵저버 패턴과의 차이점은 다음과 같다.
+
+1. 옵저버 패턴은 Observer와 Subject 간 서로를 알고 있으나, 발행 구독 패턴에서는 서로를 몰라도 상관없다.
+
+    옵저버 패턴은 두 객체간의 직접적인 소통이 이루어져야 한다.
+(Subject에서 Observer의 메서드를 직접적으로 호출하기 때문)
+ 
+    반면 발행 구독 패턴은 Publisher 객체와 Subscriber 객체 사이에 직접적인 소통을 하지 않아도 된다.
+소통의 역할을 Event Channel인 제 3자가 수행하기 때문이다.
+ 
+2. 발행 구독 패턴이 옵저버 패턴보다 더 낮은 결합도를 가진다.
+
+    1의 내용에서 살펴봤듯이, 서로의 존재를 알 필요가 없으므로 둘 사이에 더욱 느슨한 결합을 얻을 수 있다.
+
+    옵저버 패턴과 다르게 발행 구독 패턴에서는 구독, 이벤트 전달 등 모두를 중간 계층에 위임하고 있으므로 더욱 분리된 구조를 구성할 수 있다는 장점이 있다.
+ 
+3. 옵저버 패턴은 주로 동기적으로 동작하며, 발행 구독 패턴은 비동기적으로 동작하게 된다.
+
+    발행구독 패턴에서는 Publisher, Subscriber 사이의 중간 브로커에게 이벤트를 던지고 다른 작업을 할 수 있기 때문에 비동기작업을 활용할 수 있다.
+
+참고 자료
+- [https://jeonyeohun.tistory.com/216](https://jeonyeohun.tistory.com/216)
+- [https://learn.microsoft.com/ko-kr/azure/architecture/patterns/publisher-subscriber](https://learn.microsoft.com/ko-kr/azure/architecture/patterns/publisher-subscriber)
+- [https://gobae.tistory.com/122](https://gobae.tistory.com/122)
