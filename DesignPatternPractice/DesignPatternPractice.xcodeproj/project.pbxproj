@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EC75729293B46DF004AA93B /* Mediator-Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC75728293B46DF004AA93B /* Mediator-Pattern.swift */; };
 		4ECA22C6292B8E3C0002D8A9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA22C5292B8E3C0002D8A9 /* main.swift */; };
 		4ECA22CD292B90010002D8A9 /* Strategy-Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA22CC292B90010002D8A9 /* Strategy-Pattern.swift */; };
 		4ECA22CF292B90AF0002D8A9 /* Observer-Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA22CE292B90AF0002D8A9 /* Observer-Pattern.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4EC75728293B46DF004AA93B /* Mediator-Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mediator-Pattern.swift"; sourceTree = "<group>"; };
 		4ECA22C2292B8E3C0002D8A9 /* DesignPatternPractice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DesignPatternPractice; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECA22C5292B8E3C0002D8A9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4ECA22CC292B90010002D8A9 /* Strategy-Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strategy-Pattern.swift"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				4ECA22CC292B90010002D8A9 /* Strategy-Pattern.swift */,
 				4ECA22CE292B90AF0002D8A9 /* Observer-Pattern.swift */,
 				4ECA22D0292B90E20002D8A9 /* Publisher-Subscriber-Pattern.swift */,
+				4EC75728293B46DF004AA93B /* Mediator-Pattern.swift */,
 			);
 			path = DesignPatternPractice;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			files = (
 				4ECA22CF292B90AF0002D8A9 /* Observer-Pattern.swift in Sources */,
 				4ECA22C6292B8E3C0002D8A9 /* main.swift in Sources */,
+				4EC75729293B46DF004AA93B /* Mediator-Pattern.swift in Sources */,
 				4ECA22CD292B90010002D8A9 /* Strategy-Pattern.swift in Sources */,
 				4ECA22D1292B90E20002D8A9 /* Publisher-Subscriber-Pattern.swift in Sources */,
 			);
