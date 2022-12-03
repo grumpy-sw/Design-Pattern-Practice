@@ -64,3 +64,32 @@
 - [https://jeonyeohun.tistory.com/216](https://jeonyeohun.tistory.com/216)
 - [https://learn.microsoft.com/ko-kr/azure/architecture/patterns/publisher-subscriber](https://learn.microsoft.com/ko-kr/azure/architecture/patterns/publisher-subscriber)
 - [https://gobae.tistory.com/122](https://gobae.tistory.com/122)
+
+
+
+## Mediator Pattern(중재자 패턴)
+
+중재자 패턴은 행동 패턴 중 하나로 객체 간 복잡한 의존 관계를 줄일 수 있는 패턴이다. 객체 간의 상호 작용 로직을 캡슐화하여 Mediator에게 맡김으로써 상호 작용 로직을 독립적으로 만들고 상호 작용 주체인 두 객체 사이의 종속성을 줄일 수 있다.
+
+![](https://miro.medium.com/max/732/0*OhWEPai_6A-JsuqM.png)
+
+- Mediator: 객체들과 통신하기 위한 인터페이스를 정의하고 상호 작용에 대한 로직을 중앙 제어 관리하는 객체
+- Component(Collague): Mediator 객체에 의해 중재되는 클래스(Object)
+
+하나의 객체에서 발생한 이벤트에 대하여 다른 객체가 응답을 할 때 중재자 패턴을 사용한다. 이 때 객체들은 서로 독립적이고 상호 작용은 Mediator 객체를 통해서 한다.
+
+중재자 패턴은 다음과 같은 특징을 갖고 있다.
+
+장점:
+- 상호 작용의 로직이 Mediator에게 중앙 집중 제어된다.
+- 단일 책임 원칙 준수: Component 자체의 작업과 다른 객체와의 상호 작용이 분리되어 있기 때문에 책임이 분리되어 코드를 수정하기 쉽다.
+- 개방 폐쇄 원칙 준수: 객체들을 변경하지 않고도 Mediator의 기능을 확장하거나 변경할 수 있다. 그 반대도 성립한다.
+- 프로그램의 component 간 결합도를 줄일 수 있다.
+
+단점:
+- 시간이 지나고 여러 기능이 추가되면 Mediator 객체가 너무 많은 기능을 포함해 복잡한 구조가 될 수 있다.
+
+참고 자료
+- [https://en.wikipedia.org/wiki/Mediator_pattern](https://en.wikipedia.org/wiki/Mediator_pattern)
+- [https://refactoring.guru/design-patterns/mediator/swift/example](https://refactoring.guru/design-patterns/mediator/swift/example)
+- [https://joycestudios.tistory.com/44](https://joycestudios.tistory.com/44)
